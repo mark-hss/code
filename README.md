@@ -138,6 +138,14 @@ For Ruby:
 # Usage: ruby example.rb
 ```
 
+For Go:
+
+```go
+go mod init <dir/module>
+or better
+go mod init github.com/mark-hss/<package>
+```
+
 ---
 
 ## 🔐 Security Rules
