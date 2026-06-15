@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-#check dns resolution against a static host/ip
-#the result should always be the same any change is a concern
-#why would anyone monitor that...
+# Name: check_resolve
+# Purpose: Monitors a static DNS record
+# Usage: ./check_resolve
 require 'resolv'
 require 'timeout'
 

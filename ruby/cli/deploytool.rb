@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-#Tool to deploy and backup
-##copies src to dst and also makes a backup
-#update the DEFAULTS.
+# Name: deploytool.rb
+# Purpose: Backups and copies source location to destination location
+# Usage: ruby deploytool --help
 require 'optparse'
 require 'find'
 require 'fileutils'
