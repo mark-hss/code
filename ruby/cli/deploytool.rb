@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 #Tool to deploy and backup
 ##copies src to dst and also makes a backup
 #update the DEFAULTS.

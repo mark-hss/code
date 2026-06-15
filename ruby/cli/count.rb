@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 #top 10 words by count
 file=ARGV[0]
 
