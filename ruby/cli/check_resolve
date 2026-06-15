@@ -1,13 +1,13 @@
 #!/usr/bin/env ruby
 #check dns resolution against a static host/ip
 #the result should always be the same any change is a concern
-#this will monitor our DNS forwarding
+#why would anyone monitor that...
 require 'resolv'
 require 'timeout'
 
 DEFAULT_TIMEOUT=2
 
-#perform dns resoltion
+#perform dns resolution
 #TODO: timing support, expanded results
 def resolve_host(name, timeout_s: DEFAULT_TIMEOUT)
   a, aaaa = [], []
