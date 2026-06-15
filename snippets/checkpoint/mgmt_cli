@@ -1,0 +1,15 @@
+1) create csv
+name,ip-address,color
+name1,1.1.1.1,red
+
+2) create a session
+mgmt_cli -r true login --domain <mds-domain> > session.id
+
+3)set session name and description
+mgmt_cli -s session.id set-session description "Description here" new-name "session name"
+
+4) add the hosts or do the stuff
+mgmt_cli -s session.id add host --batch <csvfile.csv>
+
+5)publish the changes
+mgmt_cli -s session.id --domain su002crmfm publish
