@@ -1,0 +1,54 @@
+Limitations of Cloud Firewall for Azure VMSS
+IPv6-only Virtual Machines (VMs) or Virtual Machines Scale Sets (VMSS) are not supported. IPv6/IPv4 VMs or VMSS are supported. Refer to sk170760 and sk163313 for more information.
+
+Only Azure Resource Manager (ARMClosed) and Terraform deployments are supported.
+
+Deployment in the Azure classic environment is not supported.
+
+Azure Load Balancers have limits on the number of supported front-end IP addresses.
+
+See Microsoft documentation on Azure Networking Limits.
+
+East-West traffic inspection between peered VNETs is supported only for RFC 1918 private networks (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16).
+
+Anti-Spoofing is disabled by default on the VMSS instances eth0 and eth1 and must not be enabled.
+
+Cloud Firewall metrics are available in a subset of Azure regions. For more information, see the Azure Monitor Supported Regions documentation.
+
+If the Endpoint Policy ManagementClosed Software BladeClosed is enabled on the Security Management ServerClosed, the Autoprovision feature is not supported,
+
+Azure DNS does not replace client DNS servers. It can be used in addition to public and ISP DNS servers. For more information, see Microsoft Azure DNS documentation.
+
+Policy Server (Desktop Policy) is not supported.
+
+For Endpoint Security managed clients, enforcement of the Firewall policy from the SmartConsoleClosed is not supported.
+
+For Endpoint Security managed clients, configuration of SCV checks from the Cloud Firewall GatewayClosed is not supported.
+
+Hub Mode (Route-All-Traffic) is not supported.
+
+Editing of Login Options and Legacy Authentication is not supported.
+
+Automatic MEP Topology is not supported.
+
+Machine Authentication is not supported.
+
+For Endpoint Security VPN, SecuRemote flavor is not supported.
+
+Connection enhancements for Cloud Firewall Gateways with multiple external interfaces (also knows as "magic button") are not supported.
+
+Site to Site VPN is not supported.
+
+Creating a VMSS environment with a name for the Load Balancer that is different from the default ("frontend-lb" or "backend-lb") is not supported.
+
+Remote Access VPN is not supported.
+
+Modifying NIC names in Azure is not supported. The NIC names must remain "eth0", "eth1".
+
+Connection draining is not supported for scale-in events.
+
+SAM rules are not supported on Virtual Machine Scale Sets (VMSS) deployments in Azure. Due to an Azure environment limitation, interface aliases cannot be configured automatically in these solutions, which prevents SAM rules from being created either automatically or manually.
+
+Browser Zero PhishingClosed is not supported in Cloud Firewall Auto Scale solutions.
+
+ClosedInstance Level Public IP (ILPIP) Address Management
