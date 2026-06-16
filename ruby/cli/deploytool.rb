@@ -7,6 +7,8 @@ require 'optparse'
 require 'find'
 require 'fileutils'
 
+#Update these!! or use cli args
+# see OptionParser
 DEFAULTS = {
   src_dir: File.expand_path('./test'),
   dst_dir: File.expand_path('./prod'),
