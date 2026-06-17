@@ -17,5 +17,5 @@ temp = sorted.length
 
 10.times do
   temp -= 1
-  puts "\"#{sorted[temp][0]}\" has #{sorted[temp][1]} occurances"
+  puts "\"#{sorted[temp][0]}\" has #{sorted[temp][1]} occurrences"
 end
