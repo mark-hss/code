@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 # Name: count.rb
-# Purpose: count top 10 word occurances in file
+# Purpose: count top 10 word occurrences in file
 # Usage: ruby count.rb
 file=ARGV[0]
 
