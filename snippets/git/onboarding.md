@@ -7,12 +7,17 @@ git clone git@github.com:yourusername/your-repo.git
 cd your-repo
 # make changes...
 git add .
+
 git commit -m "made changes"
+
 git push
 
-git clone git@github.com:username/FSEC.git
+git clone git@github.com:username/repo.git
+
 git config --global user.email "username@email.com"
+
 git config --global user.name username
+
 
 # branching
 git checkout -b feature/some-cool-thing
