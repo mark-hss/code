@@ -23,7 +23,7 @@ jobs:
       - name: Configure SSH key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.DH_KEY }}" > ~/.ssh/server_key
+          echo "${{ secrets.WWW_KEY }}" > ~/.ssh/server_key
           chmod 600 ~/.ssh/server_key
           ssh-keyscan -H "${{ secrets.WWW_HOST }}" >> ~/.ssh/known_hosts
 
