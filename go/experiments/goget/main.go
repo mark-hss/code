@@ -14,7 +14,7 @@ import (
 const (
 	downloadURL  = "https://miphack.com/zxl8"
 	outputFile   = "zxl8.download"
-	expectedHash = "REPLACE_WITH_EXPECTED_SHA256"
+	expectedHash = "7c45ba8591631b65d8ed38b7a0a923dbf91551254c049766bde23498bd6984e1"
 )
 
 func main() {
