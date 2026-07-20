@@ -1,0 +1,49 @@
+@description('Bootstrap commands passed to the Check Point VMSS instances')
+param bootstrapScript string = '''
+#!/bin/bash
+
+echo "Bootstrap executed at $(date)" > /var/log/custom-bootstrap-test.log
+
+touch /tmp/custom-data-bootstrap-success
+'''
+
+resource checkpointVmss 'Microsoft.Compute/virtualMachineScaleSets@2024-11-01' = {
+  name: vmssName
+  location: location
+
+  sku: {
+    name: vmSize
+    tier: 'Standard'
+    capacity: instanceCount
+  }
+
+  properties: {
+    upgradePolicy: {
+      mode: 'Manual'
+    }
+
+    virtualMachineProfile: {
+      osProfile: {
+        computerNamePrefix: 'cpvmss'
+        adminUsername: adminUsername
+
+        // Azure expects customData to already be Base64 encoded
+        customData: base64(bootstrapScript)
+
+        linuxConfiguration: {
+          disablePasswordAuthentication: true
+          ssh: {
+            publicKeys: [
+              {
+                path: '/home/${adminUsername}/.ssh/authorized_keys'
+                keyData: sshPublicKey
+              }
+            ]
+          }
+        }
+      }
+
+      // storageProfile, networkProfile, etc.
+    }
+  }
+}

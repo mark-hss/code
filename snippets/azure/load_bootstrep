@@ -1,0 +1,34 @@
+var bootstrapScript = loadTextContent('./bootstrap.sh')
+
+resource checkpointVmss 'Microsoft.Compute/virtualMachineScaleSets@2024-11-01' = {
+  name: vmssName
+  location: location
+
+  sku: {
+    name: vmSize
+    tier: 'Standard'
+    capacity: instanceCount
+  }
+
+  properties: {
+    virtualMachineProfile: {
+      osProfile: {
+        computerNamePrefix: 'cpvmss'
+        adminUsername: adminUsername
+        customData: base64(bootstrapScript)
+
+        linuxConfiguration: {
+          disablePasswordAuthentication: true
+          ssh: {
+            publicKeys: [
+              {
+                path: '/home/${adminUsername}/.ssh/authorized_keys'
+                keyData: sshPublicKey
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

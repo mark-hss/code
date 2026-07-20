@@ -1,0 +1,12 @@
+#!/bin/bash
+
+LOG_FILE="/var/log/custom-bootstrap-test.log"
+
+{
+    echo "Check Point bootstrap test"
+    echo "Date: $(date)"
+    echo "Hostname: $(hostname)"
+    echo "User: $(whoami)"
+} > "${LOG_FILE}"
+
+touch /tmp/custom-data-bootstrap-success
