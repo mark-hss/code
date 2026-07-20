@@ -35,7 +35,7 @@ If it is useful, repeatable, and safe to share, it probably belongs here.
 
 ---
 
-## 📁 Suggested Repository Structure
+## 📁 Repository Structure
 
 ```text
 code/
@@ -102,7 +102,7 @@ git commit -m "Add useful script"
 git push origin feature/my-useful-script
 ```
 
-Open a pull request or request review according to the team workflow.
+Open a pull request.
 
 ---
 
