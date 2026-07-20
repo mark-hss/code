@@ -35,7 +35,7 @@ If it is useful, repeatable, and safe to share, it probably belongs here.
 
 ---
 
-## 📁 Suggested Repository Structure
+## 📁 Repository Structure
 
 ```text
 code/
