@@ -1,4 +1,4 @@
-##Github Tools/Apps
+## Github Tools/Apps
 
 lazygit 
 tig 

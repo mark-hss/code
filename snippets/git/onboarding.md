@@ -1,4 +1,4 @@
-###Onboarding Github
+## Onboarding Github
 
 General Github usage notes, tips and tricks.
 
